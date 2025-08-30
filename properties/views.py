@@ -8,4 +8,4 @@ def property_list(request):
     properties = Property.objects.all().values(
         "id", "title", "description", "price", "location", "created_at"
     )
-    return JsonResponse({"properties": list(properties)})
+    return JsonResponse({"data": list(properties)})
